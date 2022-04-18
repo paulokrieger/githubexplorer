@@ -25,27 +25,32 @@ describe('Card', () => {
 
       // initial animation state
       expect(
-        animatedView.props.style.transform[0].translateX
+				animatedView.props.style.translateX
+        // animatedView.props.style.transform[0].translateX
       ).toBe(0.25 * 750);
       expect(
-        animatedView.props.style.opacity
+				animatedView.props.style.opacity
+        // animatedView.props.style.opacity
       ).toBe(0);
 
       // middle animation state
       advanceAnimationByTime(500);
 
       expect(
-        getAnimatedStyle(animatedView).transform[0].translateX
+        getAnimatedStyle(animatedView).translateX
+        // getAnimatedStyle(animatedView).transform[0].translateX
       ).toBe(112.236);
       expect(
         getAnimatedStyle(animatedView).opacity
+        // getAnimatedStyle(animatedView).opacity
       ).toBe(0.40140800000000004);
 
       // end animation state
       advanceAnimationByTime(600);
 
       expect(
-        getAnimatedStyle(animatedView).transform[0].translateX
+        getAnimatedStyle(animatedView).translateX
+        // getAnimatedStyle(animatedView).transform[0].translateX
       ).toBe(0);
       expect(
         getAnimatedStyle(animatedView).opacity
